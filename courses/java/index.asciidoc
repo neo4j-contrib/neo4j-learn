@@ -1,0 +1,29 @@
+The Java Course
+==========
+
+If you want to learn how to best use Neo4j from Java, you are at the right place.
+
+++++
+<video poster="pics/video/gizmo.jpg" id="video" style="cursor: pointer;" >
+  <source src="pics/video/gizmo.mp4" />
+  <source src="pics/video/gizmo.webm" type="video/webm" />
+  <source src="pics/video/gizmo.ogv" type="video/ogg" />
+  Video not playing? <a href="pics/video/gizmo.mp4">Download file</a> instead.
+</video>
+
+<script type="text/javascript">
+  var video = document.getElementById('video');
+  video.addEventListener('click',function(){
+    video.play();
+  },false);
+</script>
+++++
+
+video::http://video.neo4j.org/3jtr[width=200,options="nocontrols,autoplay"]
+
+A good way to start is at the examples from the Neo4j Manual:
+
+
+
+
+// include::{importdir}/neo4j-examples-docs-jar/dev/index.txt[]
