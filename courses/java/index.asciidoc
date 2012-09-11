@@ -1,5 +1,5 @@
 The Java Course
-==========
+===============
 
 If you want to learn how to best use Neo4j from Java, you are at the right place.
 
@@ -12,7 +12,7 @@ To start with, you probably want to know what a Graph Database is and why anyone
 <iframe title="Neo4j Videography Video Player" width="640" height="360" src="http://video.neo4j.org/player/3jtr" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ++++
 
-:leveloffset: 1
+:leveloffset: 2
 
 include::eclipse-java-setup.asciidoc[]
 
