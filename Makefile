@@ -5,34 +5,18 @@
 PROJECTNAME      = neo4j-learn
 BUILDDIR         = $(CURDIR)/target
 TOOLSDIR         = $(BUILDDIR)/tools
-SRCDIR           = $(CURDIR)
+SRCDIR     		 = $(CURDIR)
+STATICSRCDIR     = $(CURDIR)/src/static
 RESOURCEDIR      = $(BUILDDIR)/classes
-SRCFILE          = $(SRCDIR)/$(PROJECTNAME).asciidoc
+SRCFILE          = $(SRCDIR)/src/asciidoc/$(PROJECTNAME).asciidoc
 IMGDIR           = $(SRCDIR)/images
 IMGTARGETDIR     = $(BUILDDIR)/classes/images
 CSSDIR           = $(TOOLSDIR)/main/resources/css
 JSDIR            = $(TOOLSDIR)/main/resources/js
 CONFDIR          = $(SRCDIR)/conf
 TOOLSCONFDIR     = $(TOOLSDIR)/main/resources/conf
-DOCBOOKFILE      = $(BUILDDIR)/$(PROJECTNAME)-shortinfo.xml
-DOCBOOKFILEHTML  = $(BUILDDIR)/$(PROJECTNAME)-html.xml
-FOPDIR           = $(BUILDDIR)/pdf
-FOPFILE          = $(FOPDIR)/$(PROJECTNAME).fo
-FOPPDF           = $(FOPDIR)/$(PROJECTNAME).pdf
-TEXTWIDTH        = 80
-TEXTDIR          = $(BUILDDIR)/text
-TEXTFILE         = $(TEXTDIR)/$(PROJECTNAME).txt
-TEXTHTMLFILE     = $(TEXTFILE).html
 SINGLEHTMLDIR    = $(BUILDDIR)/html
-SINGLEHTMLFILE   = $(SINGLEHTMLDIR)/index.html
-ANNOTATEDDIR     = $(BUILDDIR)/annotated
-ANNOTATEDFILE    = $(HTMLDIR)/$(PROJECTNAME).html
-CHUNKEDHTMLDIR   = $(BUILDDIR)/chunked
-CHUNKEDOFFLINEHTMLDIR = $(BUILDDIR)/chunked-offline
-CHUNKEDTARGET     = $(BUILDDIR)/$(PROJECTNAME).chunked
-CHUNKEDSHORTINFOTARGET = $(BUILDDIR)/$(PROJECTNAME)-html.chunked
-MANPAGES         = $(BUILDDIR)/manpages
-UPGRADE          = $(BUILDDIR)/upgrade
+SINGLEHTMLFILE   = $(SINGLEHTMLDIR)/$(PROJECTNAME).html
 EXTENSIONSRC     = $(TOOLSDIR)/bin/extensions
 EXTENSIONDEST    = ~/.asciidoc
 SCRIPTDIR        = $(TOOLSDIR)/build
@@ -119,6 +103,14 @@ initialize:
 	#
 	find $(TOOLSDIR) \( -path '*.py' -o -path '*.sh' \) -exec chmod 0755 {} \;
 
+copy-resources:
+	#
+	#
+	# copy static content over to destination dirs.
+	#
+	#
+	rsync -u "$(STATICSRCDIR)/"* "$(SINGLEHTMLDIR)/"
+
 installextensions: initialize
 	#
 	#
@@ -128,7 +120,7 @@ installextensions: initialize
 	mkdir -p $(EXTENSIONDEST)
 	cp -fr "$(EXTENSIONSRC)/"* $(EXTENSIONDEST)
 
-simple-asciidoc: initialize installextensions
+simple-asciidoc: initialize installextensions copy-resources
 	#
 	#
 	# Building HTML straight from the AsciiDoc sources.
