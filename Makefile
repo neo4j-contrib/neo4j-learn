@@ -135,9 +135,11 @@ simple-asciidoc: initialize installextensions copy-resources
 	mkdir -p "$(SINGLEHTMLDIR)/images"
 	mkdir -p "$(SINGLEHTMLDIR)/css"
 	mkdir -p "$(SINGLEHTMLDIR)/js"
-	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) -b html5 --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
+	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) -b html5 --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute=docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
 	rsync -u "$(IMGTARGETDIR)/"* "$(SINGLEHTMLDIR)/images"
+	rsync -u "$(TOOLSDIR)/main/resources/css/"* "$(SINGLEHTMLDIR)/css"
 	rsync -u "$(CSSDIR)/"* "$(SINGLEHTMLDIR)/css"
 	rsync -u "$(JSDIR)/"* "$(SINGLEHTMLDIR)/js"
+	rsync -u "$(TOOLSDIR)/main/resources/js/"* "$(SINGLEHTMLDIR)/js"
 
 

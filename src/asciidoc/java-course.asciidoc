@@ -1,3 +1,2 @@
 
-
 include::courses/java/index.asciidoc[]
