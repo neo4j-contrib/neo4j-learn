@@ -1,18 +1,22 @@
 # Makefile for the Neo4j Manual in French.
 #
 # Note: requires mvn to unpack some stuff first.
-
 PROJECTNAME      = neo4j-learn
+
+ifdef PROJECT
+	PROJECTNAME = $(PROJECT)
+endif
+
 BUILDDIR         = $(CURDIR)/target
 TOOLSDIR         = $(BUILDDIR)/tools
 SRCDIR     		 = $(CURDIR)
-STATICSRCDIR     = $(CURDIR)/src/static
+STATICSRCDIR     = $(CURDIR)/src/resources/html
 RESOURCEDIR      = $(BUILDDIR)/classes
 SRCFILE          = $(SRCDIR)/src/asciidoc/$(PROJECTNAME).asciidoc
 IMGDIR           = $(SRCDIR)/images
 IMGTARGETDIR     = $(BUILDDIR)/classes/images
-CSSDIR           = $(TOOLSDIR)/main/resources/css
-JSDIR            = $(TOOLSDIR)/main/resources/js
+CSSDIR           = $(CURDIR)/src/resources/css
+JSDIR            = $(CURDIR)/src/resources/js
 CONFDIR          = $(SRCDIR)/conf
 TOOLSCONFDIR     = $(TOOLSDIR)/main/resources/conf
 SINGLEHTMLDIR    = $(BUILDDIR)/html
@@ -23,6 +27,7 @@ SCRIPTDIR        = $(TOOLSDIR)/build
 ASCIDOCDIR       = $(TOOLSDIR)/bin/asciidoc
 ASCIIDOC         = $(ASCIDOCDIR)/asciidoc.py
 A2X              = $(ASCIDOCDIR)/a2x.py
+
 
 ifdef VERBOSE
 	V = -v
@@ -74,6 +79,7 @@ help:
 	@echo "To keep temporary files, use 'KEEP=1'".
 	@echo "To set the version, use 'VERSION=[the version]'".
 	@echo "To set the importdir, use 'IMPORTDIR=[the importdir]'".
+	@echo "To set project root name of the root asciidoc file, use 'PROJECT=[projectname]'".
 
 #dist: installfilter offline-html html html-check text text-check pdf manpages upgrade cleanup yearcheck
 
@@ -129,7 +135,7 @@ simple-asciidoc: initialize installextensions copy-resources
 	mkdir -p "$(SINGLEHTMLDIR)/images"
 	mkdir -p "$(SINGLEHTMLDIR)/css"
 	mkdir -p "$(SINGLEHTMLDIR)/js"
-	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
+	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) -b html5 --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
 	rsync -u "$(IMGTARGETDIR)/"* "$(SINGLEHTMLDIR)/images"
 	rsync -u "$(CSSDIR)/"* "$(SINGLEHTMLDIR)/css"
 	rsync -u "$(JSDIR)/"* "$(SINGLEHTMLDIR)/js"
