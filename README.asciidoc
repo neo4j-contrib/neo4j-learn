@@ -1,2 +1,17 @@
 The Neo4j Learn project
-===============
+=======================
+
+Build and install
+-----------------
+
+First, install the toolchain from https://github.com/neo4j/manual[The Neo4j Manual project].
+
+To build please do
+
+`mvn clean package`
+
+to pull down the manual artifacts and the tooling
+
+`make preview` to buidl default
+
+`make help` for options.
