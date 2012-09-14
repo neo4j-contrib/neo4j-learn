@@ -1,0 +1,201 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  min-width: 400px;
+  width: 100%;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+html {
+  height: 100%;
+  background-color: #262626 ! important;
+}
+
+body {
+  background-color: #f6f6f6 ! important;
+}
+
+a, a:visited, a:link {
+  color: #5b9eae;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #6bbbce;
+  text-decoration: underline;
+}
+
+header {
+  /*background-color: #005a72;*/
+  /*background: #005a72 url('005a72.gif');*/
+  background: #014f65;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;		
+}
+
+header .neo4j-logo {
+  float: left;
+  margin: 2em 0 0 1em;
+}
+
+header .searchBox {
+  float: right;
+  margin: 3em 2em 0 0;
+}
+
+header .searchBox input {
+  width: 24em;
+  font-weight: normal;
+  height: 2.2em;
+  font-size: 0.9em;
+  padding: 0.25em;
+  border-radius: 3px;
+  border: 2px solid #eee;
+  color: #788689;
+}
+
+.stage {
+  min-height: 8em;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  background: -webkit-gradient(linear, left bottom, left top, from(#82a3ac), to(#b4d5de)) no-repeat;
+  background: -moz-linear-gradient(90deg, #82a3ac, #b4d5de) no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#b4d5de', EndColorStr='#82a3ac', GradientType=0);
+}
+
+.stage .mid {
+  padding: 2em 0 0 2em;
+}
+
+.stage h1 {
+  font-family: 'Share', Verdana, Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  color: #f6f6f6;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  /*min-height: 300px;*/
+}
+
+.main .mid {
+  overflow: auto;
+  border-top: none;
+  position: relative;
+  background-color: #fff ! important;
+  padding: 0 0 1em 2em;
+  
+}
+
+.main .mainBlock {
+  width: 50%;
+  float: left;
+}
+
+.main h2 {
+  color: #788689;
+  margin-top: 1.5em;
+}
+
+header .mid {
+  background-color: #014f65;
+}
+
+header h1 {
+  margin: 0;
+  font-family: OfficinaBold, sans-serif;
+  font-weight: normal;
+}
+
+em.code, em.tx {
+	font-family: "Courier New", Courier, monospace, serif;
+	font-style: normal;
+}
+
+em.tx {
+	font-weight: bold;
+}
+
+.infoBlock {
+  width: 33.333%;
+  float: left;
+}
+
+.infoBlock h3 {
+  font-size: 1.0em;
+}
+
+.infoBlock ul {
+  padding-left: 0;
+}
+
+.infoBlock ul li {
+  margin: .5em 0 .5em 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.mainBlock ul, .mainBlock ol {
+  margin: .25em 0;
+  color: #5b9eae;
+}
+
+.mainBlock > ul, .mainBlock > ol {
+  padding-left: 0 ! important;
+}
+
+.mainBlock > ul ol li {
+  list-style-type: decimal;
+}
+
+.mainBlock ul li {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.mainBlock ol li {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  list-style-type: upper-roman;
+}
+
+footer, .bottom {
+  background: #262626;
+  font-size: 0.95em;
+  color: #fff;
+  /*width: 100%;*/
+  margin: 0;
+  /*padding: 2em;*/
+}
+
+footer .mid, .bottom .mid {
+  padding: 2em 0 0 2em;
+}
+
+footer div.bar {
+  color: #788689;
+  position: absolute;
+  bottom: .5em;
+  font-size: 0.9em;
+  
+}
+
+footer .mid div.bar div {
+  padding-right: 1em;
+  display: inline;
+  white-space: nowrap;
+}
+
+footer .mid {
+  min-height: 8em;
+}

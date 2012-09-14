@@ -5,5 +5,5 @@ Python getting started
 This is a very basic script:
 
 ++++
-<script src="https://gist.github.com/3347559.js?file=gistfile1.py"></script>
+<script src="https://gist.github.com/3347559.js?file=gistfile1.py&width=200"></script>
 ++++
