@@ -19,7 +19,7 @@ To start with, you probably want to know what a Graph Database is and why anyone
 ++++
 
 
-:leveloffset: 2
+:leveloffset: 1
 
 include::eclipse-java-setup.asciidoc[]
 
