@@ -6,9 +6,7 @@ The Neo4j Learn Project
 There are a number of different courses that 
 you might be interested in when learning different aspects of Neo4j:
 
-pass:[<q>To be or not to be</q>]
-
-related:related-target1[attr1, tag=attr2]
+related::related-target1[attr1, tag="attr2"]
 
 
 http://neo4j.org[neo4j]
