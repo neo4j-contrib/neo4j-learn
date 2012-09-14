@@ -12,6 +12,6 @@ To build please do
 
 to pull down the manual artifacts and the tooling
 
-`make preview` to buidl default
+`./build.sh` to build all material
 
 `make help` for options.
