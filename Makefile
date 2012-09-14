@@ -15,6 +15,7 @@ RESOURCEDIR      = $(BUILDDIR)/classes
 SRCFILE          = $(SRCDIR)/src/asciidoc/$(PROJECTNAME).asciidoc
 IMGDIR           = $(SRCDIR)/images
 IMGTARGETDIR     = $(BUILDDIR)/classes/images
+IMGSRCDIR        = $(CURDIR)/src/resources/images
 CSSDIR           = $(CURDIR)/src/resources/css
 JSDIR            = $(CURDIR)/src/resources/js
 CONFDIR          = $(SRCDIR)/conf
@@ -138,6 +139,7 @@ simple-asciidoc: initialize installextensions copy-resources
 	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) -b html5 --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute=docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
 	rsync -u "$(IMGTARGETDIR)/"* "$(SINGLEHTMLDIR)/images"
 	rsync -u "$(TOOLSDIR)/main/resources/css/"* "$(SINGLEHTMLDIR)/css"
+	rsync -u "$(IMGSRCDIR)/"* "$(SINGLEHTMLDIR)/images"
 	rsync -u "$(CSSDIR)/"* "$(SINGLEHTMLDIR)/css"
 	rsync -u "$(JSDIR)/"* "$(SINGLEHTMLDIR)/js"
 	rsync -u "$(TOOLSDIR)/main/resources/js/"* "$(SINGLEHTMLDIR)/js"
