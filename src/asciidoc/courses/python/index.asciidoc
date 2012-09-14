@@ -1,6 +1,15 @@
 Python getting started
 ======================
 
+Welcome to the python course.
+
+Start
+-----
+
+include::../../nav-back.asciidoc[]
+
+related::related-target1[attr1, tag="attr2"]
+
 
 This is a very basic script:
 

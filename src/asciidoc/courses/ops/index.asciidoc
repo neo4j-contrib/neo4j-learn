@@ -1,5 +1,16 @@
 Neo4j Operations Course
 =======================
+
+Just trying things out here:
+
+Start
+-----
+
+include::../../nav-back.asciidoc[]
+
+related::related-target1[attr1, tag="attr2"]
+
+
 Just trying things out here:
 
 // images are looked up in target/classes/images
