@@ -1,7 +1,7 @@
 Python getting started
 ======================
 
-Welcome to the python course.
+Welcome to the Python Course.
 
 Start
 -----

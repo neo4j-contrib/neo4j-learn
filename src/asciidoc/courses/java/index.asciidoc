@@ -6,7 +6,7 @@ If you want to learn how to best use Neo4j from Java, you are at the right place
 
 
 
-Getting started with Java and Neo4j
+Getting started with Neo4j in Java
 -----------------------------------
 
 include::../../nav-back.asciidoc[]
