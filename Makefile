@@ -1,7 +1,7 @@
 # Makefile for the Neo4j Manual in French.
 #
 # Note: requires mvn to unpack some stuff first.
-PROJECTNAME      = neo4j-learn
+PROJECTNAME      = java-course
 
 ifdef PROJECT
 	PROJECTNAME = $(PROJECT)
