@@ -1,9 +1,0 @@
-The Eclipse Java Development Setup
-==================================
-
-This is a screencast on how to get an Eclipse project working with the necessary Neo4j libraries mounted for a basic Java project:
-
-++++
-<iframe width="560" height="315" src="http://www.youtube.com/embed/BmqTJAm-tIA" frameborder="0" allowfullscreen></iframe>
-++++
-

@@ -4,24 +4,13 @@ The Java Course
 
 If you want to learn how to best use Neo4j from Java, you are at the right place.
 
-
-
-Getting started with Neo4j in Java
------------------------------------
-
 include::../../nav-back.asciidoc[]
 
 related::related-target1[attr1, tag="attr2"]
 
 :leveloffset: 1
 
-include::eclipse-java-setup.asciidoc[]
+include::setup.asciidoc[]
 
-A good way to start is at the examples from the Neo4j Manual:
+include::hello-world.asciidoc[]
 
-
-
-++++
-<br/>
-<b>This is bold</b>
-++++
