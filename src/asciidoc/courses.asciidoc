@@ -21,6 +21,8 @@ Available Courses
 
 link:java-course.html[Java]
 
+link:cypher-course.html[Cypher]
+
 link:ops-course.html[OPS]
 
 link:python-course.html[Python]
