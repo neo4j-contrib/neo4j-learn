@@ -79,7 +79,14 @@
   .col {
     float: left;
     width: 44%;
+  }      
+
+  .monospaced {
+    font-family: "Courier New", Courier, monospace;
+    font-size: inherit;
+    color: navy;
   }
+  
 
 }
 

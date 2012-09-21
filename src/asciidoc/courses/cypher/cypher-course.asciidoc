@@ -5,24 +5,28 @@
 Cypher is intended to be a easy to write, easy to write language, which is still expressive
 and powerful.
 
+== Cypher Manual ==
+
+For a more formal introduction to Cypher please visit the  link:cypher-manual.html[Manual pages]
+
 
 === Setup ===
-To run this tutorial, you have two options. Either download and run the Neo4j Server or use our online Cypher console with a prepared dataset.
+To run this tutorial, you have _two options_. Either download and run the Neo4j Server or use our online Cypher console with a prepared dataset.
 
 ////
 create statement for the console
 ////
 
 ==== Neo4j Server ====
-* download the http://neo4j.org/download[Neo4j Community server for your platform] 
+* download and unzip the http://neo4j.org/download[Neo4j Community server for your platform] 
 * download and unzip the http://example-data.neo4j.org[sample cineasts dataset] in +data/graph.db+
 * start the server with +bin/neo4j start+
 
 ==== Neo4j Console ====
 
-The Neo4j Console is an online interactive shell that can be used to create graphs, experiment with them and share your data (like a gist) with a single click.
+The Neo4j Console is an online interactive shell that can be used to create graphs, experiment with them in a sandbox and share your data (like a gist) with a single click.
 
-We prepared a http://console.neo4j.org[console] with a fraction of the domain dataset to be used.
+We prepared a http://console.neo4j.org[console] with a part of the domain dataset to be used.
 
 === Quick intro to the graph model we use
 
@@ -38,8 +42,6 @@ The domain we use is a social movie database, it consists of movies, actors, dir
 * Use cypher in different languages (gists)
 * References (cheat-sheet, manual, screencast)
 ////
-
-include::docs/neo4j-examples-docs-jar/dev/hello-world.txt[]
 
 
 .Notes
@@ -157,8 +159,34 @@ The interactive explorative console will help you throughout this course:
 <iframe width="560" height="315" src="http://console.neo4j.org" frameborder="0" allowfullscreen></iframe>
 ++++
 
-=== Screencast Video: Intro to Cypher ===
+== Related Links ==
 
+* http://neo4j.org/resources/cypher[Cypher Cheat Sheet]
+* http://console.neo4j.org[Neo4j Cypher Console] - Sandbox, Gist &amp; Repl
+* http://http://docs.neo4j.org/chunked/snapshot/cypher-query-language.html[Cypher Manual]
+* http://docs.neo4j.org/chunked/snapshot/data-modeling-examples.html[Data Modeling examples]
+
+* http://blog.neo4j.org/2012/09/cypher-webinar-follow-up.html[Cypher Webinar]
+* http://ahalmeida.com/2011/09/06/how-neo4j-uses-scalas-parser-combinator-cyphers-internals-part-1/[Presentations on Cypher Internals by Adriano Almeida]
+* http://maxdemarzi.com/tag/cypher-2/[Cypher related blogs] by Max De Marzi
+* http://www.markhneedham.com/blog/category/neo4j/[Mark Needhams blog series]
+
+* https://gist.github.com/3529999">[How to use Cypher from other programming languages] (Gist)
+* http://blog.neo4j.org/2012/06/wanted-your-help-in-testing-neo4j-jdbc.html[Neo4j Cypher JDBC Driver]
+* http://blog.neo4j.org/2012/08/at-conference-need-dataset-neo4j-at.html[Conference Session Datast from NOSQL-NOW]
+* http://github.com/jexp/class-graph[Class-Graph: Using Neo4j to analyze software quality]
+* http://example-data.neo4j.org[Example datasets] to unzip in your server +data/graph.db+ directory
+* http://de.slideshare.net/jexp/geekout-publish[Cypher internals presentation] http://player.vimeo.com/video/45318365[Video]
+
+== Related Presentations ==
+
+++++
+<iframe src="http://de.slideshare.net/slideshow/embed_code/14133863" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+++++
+
+== Related Videos ==
+=== Intro to Cypher ===
 ++++
 <iframe title="Neo4j Videography Video Player" width="640" height="360" src="http://video.neo4j.org/player/ybMbf" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ++++
+

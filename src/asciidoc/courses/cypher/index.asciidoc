@@ -1,6 +1,6 @@
 [[cypher-course]]
-The Cypher Course
-===============
+
+== The Cypher Course
 
 This course teaches you the Neo4j Graph Query language Cypher.
 
@@ -10,7 +10,8 @@ related::related-target1[attr1, tag="attr2"]
 ////
 :leveloffset: 1
 
-include::domain.asciidoc[]
+include::cypher-course.asciidoc[]
+
 ////
 include::hello-world.asciidoc[]
 ////
