@@ -56,6 +56,19 @@ toc: function (toclevels) {
     this.toclevel = toclevel;
   }
 
+  function AddTocEntry(parentNode, entry) {
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var tocListElement = document.createElement("li");
+    tocListElement.appendChild(a);
+    tocListElement.className = "toclevel" + entry.toclevel;
+    parentNode.appendChild(tocListElement);
+  
+  }
+
   function tocEntries(el, toclevels) {
     var result = new Array;
     var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
@@ -98,18 +111,25 @@ toc: function (toclevels) {
   
   // Rebuild TOC entries.
   var entries = tocEntries(document.getElementById("content"), toclevels);
+  var previousLevel = 2;
+  var tocList = document.createElement("ul");
+  var previousListElement = tocList;
   for (var i = 0; i < entries.length; ++i) {
     var entry = entries[i];
-    if (entry.element.id == "")
-      entry.element.id = "_toc_" + i;
-    var a = document.createElement("a");
-    a.href = "#" + entry.element.id;
-    a.appendChild(document.createTextNode(entry.text));
-    var div = document.createElement("div");
-    div.appendChild(a);
-    div.className = "toclevel" + entry.toclevel;
-    toc.appendChild(div);
+    if(previousLevel<entry.toclevel) {
+      var childlistItem = document.createElement("li");
+      previousListElement.appendChild(childlistItem);
+      var childlist = document.createElement("ul");
+      childlistItem.appendChild(childlist);
+      previousListElement=childlist;
+    } else if(previousLevel>entry.toclevel) {
+      previousListElement=previousListElement.parentNode.parentNode;
+    }
+    previousLevel = entry.toclevel;
+    AddTocEntry(previousListElement, entry);
+    
   }
+  toc.appendChild(tocList);
   if (entries.length == 0)
     toc.parentNode.removeChild(toc);
 },

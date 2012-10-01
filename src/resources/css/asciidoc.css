@@ -341,19 +341,19 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+li.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
-div.toclevel2 {
+li.toclevel2 a {
   margin-left: 2em;
   font-size: 0.9em;
 }
-div.toclevel3 {
+li.toclevel3 a {
   margin-left: 4em;
   font-size: 0.9em;
 }
-div.toclevel4 {
+li.toclevel4 a {
   margin-left: 6em;
   font-size: 0.9em;
 }

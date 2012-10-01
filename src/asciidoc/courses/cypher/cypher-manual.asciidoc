@@ -1,3 +1,4 @@
+[[Cypher_Intro]]
 == Cypher Introduction ==
 
 include::{importdir}/neo4j-cypher-docs-jar/dev/introduction.txt[]

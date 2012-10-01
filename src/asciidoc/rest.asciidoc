@@ -1,0 +1,7 @@
+The REST API Top Level
+======================
+
+some content
+
+:leveloffset: 2
+include::{importdir}/neo4j-server-docs-jar/dev/rest-api/index.txt[]

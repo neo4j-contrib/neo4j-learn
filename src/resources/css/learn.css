@@ -240,3 +240,44 @@
 .gist {
   margin-right: 2em;
 }
+
+
+#toc {
+  /*width: 190px;*/
+/*  position: fixed;
+*/
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+li.toclevel0, li.toclevel1, li.toclevel2, li.toclevel3, li.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/*li.toclevel1 a {
+  margin-left: 0em;
+  font-size: 0.9em;
+}
+*/
+li.toclevel2 a {
+  margin-left: 0em;
+  font-size: 0.9em;
+}
+li.toclevel3 a {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+li.toclevel4 a {
+  margin-left: 4em;
+  font-size: 0.9em;
+}

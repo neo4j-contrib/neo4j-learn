@@ -7,7 +7,7 @@ and powerful.
 
 == Cypher Manual ==
 
-For a more formal introduction to Cypher please visit the  link:cypher-manual.html[Manual pages]
+For a more formal introduction to Cypher please visit the  link:files.html#Cypher_Intro[Cypher Intro]
 
 
 === Setup ===

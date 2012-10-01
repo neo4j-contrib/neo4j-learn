@@ -10,7 +10,7 @@ endif
 BUILDDIR         = $(CURDIR)/target
 TOOLSDIR         = $(BUILDDIR)/tools
 SRCDIR     		 = $(CURDIR)
-STATICSRCDIR     = $(CURDIR)/src/resources/html
+STATICSRCDIR     = $(CURDIR)/src/resources/
 RESOURCEDIR      = $(BUILDDIR)/classes
 SRCFILE          = $(SRCDIR)/src/asciidoc/$(PROJECTNAME).asciidoc
 IMGDIR           = $(SRCDIR)/images
@@ -116,7 +116,10 @@ copy-resources:
 	# copy static content over to destination dirs.
 	#
 	#
-	rsync -u "$(STATICSRCDIR)/"* "$(SINGLEHTMLDIR)/"
+	rsync -u "$(STATICSRCDIR)html/"* "$(SINGLEHTMLDIR)/"
+	rsync -u "$(STATICSRCDIR)images/"* "$(SINGLEHTMLDIR)/images"
+	rsync -u "$(STATICSRCDIR)js/"* "$(SINGLEHTMLDIR)/js"
+	rsync -u "$(STATICSRCDIR)css/"* "$(SINGLEHTMLDIR)/css"
 
 installextensions: initialize
 	#
