@@ -93,13 +93,13 @@ cleanup:
 	#
 	#
 ifndef KEEP
-	rm -f "$(DOCBOOKFILE)"
-	rm -f "$(BUILDDIR)/"*.xml
-	rm -f "$(ANNOTATEDDIR)/"*.xml
-	rm -f "$(FOPDIR)/images"
-	rm -f "$(FOPFILE)"
-	rm -f "$(UPGRADE)/"*.xml
-	rm -f "$(UPGRADE)/"*.html
+	rm -rf "$(DOCBOOKFILE)"
+	rm -rf "$(BUILDDIR)/"*.xml
+	rm -rf "$(ANNOTATEDDIR)/"*.xml
+	rm -rf "$(FOPDIR)/images"
+	rm -rf "$(FOPFILE)"
+	rm -rf "$(UPGRADE)/"*.xml
+	rm -rf "$(UPGRADE)/"*.html
 endif
 
 initialize:
