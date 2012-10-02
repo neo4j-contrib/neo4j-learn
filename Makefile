@@ -136,15 +136,15 @@ simple-asciidoc: initialize installextensions copy-resources
 	# Building HTML straight from the AsciiDoc sources.
 	#
 	#
-	mkdir -p "$(SINGLEHTMLDIR)/images"
-	mkdir -p "$(SINGLEHTMLDIR)/css"
-	mkdir -p "$(SINGLEHTMLDIR)/js"
+#	mkdir -p "$(SINGLEHTMLDIR)/images"
+#	mkdir -p "$(SINGLEHTMLDIR)/css"
+#	mkdir -p "$(SINGLEHTMLDIR)/js"
 	"$(ASCIIDOC)" $(ASCIIDOC_FLAGS) -a toc2 -b html5 --conf-file="$(TOOLSCONFDIR)/asciidoc.conf"  --conf-file="$(CONFDIR)/asciidoc.conf" --attribute=docinfo1 --out-file "$(SINGLEHTMLFILE)" "$(SRCFILE)"
-	rsync -u "$(IMGTARGETDIR)/"* "$(SINGLEHTMLDIR)/images"
-	rsync -u "$(TOOLSDIR)/main/resources/css/"* "$(SINGLEHTMLDIR)/css"
-	rsync -u "$(IMGSRCDIR)/"* "$(SINGLEHTMLDIR)/images"
-	rsync -u "$(CSSDIR)/"* "$(SINGLEHTMLDIR)/css"
-	rsync -u "$(JSDIR)/"* "$(SINGLEHTMLDIR)/js"
-	rsync -u "$(TOOLSDIR)/main/resources/js/"* "$(SINGLEHTMLDIR)/js"
+	rsync -u "$(IMGTARGETDIR)/"* "$(SINGLEHTMLDIR)/images/"
+	rsync -u "$(TOOLSDIR)/main/resources/css/"* "$(SINGLEHTMLDIR)/css/"
+	rsync -u "$(IMGSRCDIR)/"* "$(SINGLEHTMLDIR)/images/"
+	rsync -u "$(CSSDIR)/"* "$(SINGLEHTMLDIR)/css/"
+	rsync -u "$(JSDIR)/"* "$(SINGLEHTMLDIR)/js/"
+	rsync -u "$(TOOLSDIR)/main/resources/js/"* "$(SINGLEHTMLDIR)/js/"
 
 
