@@ -1,4 +1,5 @@
 #!/bin/bash
+mvn package
 #make preview PROJECT=files
 make preview PROJECT=rest
 make preview PROJECT=cypher
