@@ -4,7 +4,7 @@ cd $( dirname $0 )
 git reset --hard --
 git clean -d -x -f 
 git pull
-mvn clean package -Pneodev
+mvn clean license:format package
 
 #make preview PROJECT=files
 make preview PROJECT=rest
