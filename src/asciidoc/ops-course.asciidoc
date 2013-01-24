@@ -1,2 +1,0 @@
-include::courses/ops/index.asciidoc[]
-

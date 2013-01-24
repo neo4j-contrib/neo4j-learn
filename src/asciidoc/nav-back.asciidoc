@@ -1,1 +1,0 @@
-link:courses.html[Back to Courses Overview]
