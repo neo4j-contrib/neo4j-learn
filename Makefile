@@ -117,9 +117,9 @@ copy-resources:
 	#
 	#
 	rsync -u "$(STATICSRCDIR)html/"* "$(SINGLEHTMLDIR)/"
-	rsync -u "$(STATICSRCDIR)images/"* "$(SINGLEHTMLDIR)/images"
-	rsync -u "$(STATICSRCDIR)js/"* "$(SINGLEHTMLDIR)/js"
-	rsync -u "$(STATICSRCDIR)css/"* "$(SINGLEHTMLDIR)/css"
+	rsync -u "$(STATICSRCDIR)images" "$(SINGLEHTMLDIR)/"
+	rsync -u "$(STATICSRCDIR)js" "$(SINGLEHTMLDIR)/"
+	rsync -u "$(STATICSRCDIR)css" "$(SINGLEHTMLDIR)/"
 
 installextensions: initialize
 	#
