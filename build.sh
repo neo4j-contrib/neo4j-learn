@@ -1,5 +1,5 @@
-#!/bin/bash
-set -e
+#!/bin/bash -ex
+
 cd $( dirname $0 )
 git reset --hard --
 git clean -d -x -f 
