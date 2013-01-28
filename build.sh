@@ -6,9 +6,7 @@ git clean -d -x -f
 git pull
 mvn clean license:format package
 
-#make preview PROJECT=files
-#make preview PROJECT=rest
-#make preview PROJECT=cypher
-make preview PROJECT=java-course
+make preview PROJECT=java-hello-world
+make preview PROJECT=java-cypher
 
 cp -rv target/html/* /var/www/learn.neo4j.org

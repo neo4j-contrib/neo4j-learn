@@ -1,0 +1,1 @@
+include::{importdir}/neo4j-cypher-docs-jar/dev/java/index.asciidoc[]

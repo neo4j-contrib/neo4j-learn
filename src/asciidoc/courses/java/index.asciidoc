@@ -1,8 +1,0 @@
-[[java-course]]
-The Java Course
-===============
-
-:leveloffset: 1
-
-include::{importdir}/neo4j-examples-docs-jar/dev/hello-world.asciidoc[]
-
