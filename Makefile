@@ -1,7 +1,7 @@
 # Makefile for the Neo4j Manual in French.
 #
 # Note: requires mvn to unpack some stuff first.
-PROJECTNAME      = snippets
+PROJECTNAME      = java-cypher
 
 ifdef PROJECT
 	PROJECTNAME = $(PROJECT)
