@@ -27,7 +27,7 @@
     <dependency>
       <groupId>org.neo4j.build.plugins</groupId>
       <artifactId>neo4j-doctools</artifactId>
-      <version>1-SNAPSHOT</version>
+      <version>5</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -39,8 +39,59 @@
     </dependency>
   </dependencies>
 
+
   <build>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>version</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src</directory>
+        <filtering>false</filtering>
+        <excludes>
+          <exclude>version</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>js</directory>
+        <targetPath>js</targetPath>
+        <filtering>true</filtering>
+        <includes>
+          <include>version.js</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>js</directory>
+        <targetPath>js</targetPath>
+        <filtering>false</filtering>
+        <excludes>
+          <exclude>version.js</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>css</directory>
+        <targetPath>css</targetPath>
+      </resource>
+    </resources>
     <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/src</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
