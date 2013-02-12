@@ -4,7 +4,7 @@ cd $( dirname $0 )
 git reset --hard --
 git clean -d -x -f 
 git pull
-mvn clean license:format package
+mvn clean package
 
 make init preview project_name=java-hello-world
 make init preview project_name=java-cypher
