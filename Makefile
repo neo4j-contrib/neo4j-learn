@@ -13,3 +13,5 @@ tools_dir                  = $(build_dir)/tools
 make_dir                   = $(tools_dir)/make
 
 include $(make_dir)/context-manual.make
+html5_dir_name             = html5/$(project_name)
+
