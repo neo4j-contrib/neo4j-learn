@@ -9,4 +9,4 @@ mvn clean license:format package
 make initialize preview project_name=java-hello-world
 make preview project_name=java-cypher
 
-cp -rv target/html/* /var/www/learn.neo4j.org
+cp -rv target/html5/* /var/www/learn.neo4j.org
