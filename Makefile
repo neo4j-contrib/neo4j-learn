@@ -2,7 +2,7 @@
 #
 
 # Project Configuration
-project_name               = java-hello-world
+project_name               = articles
 language                   = en
 
 # Minimal setup

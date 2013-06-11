@@ -1,0 +1,23 @@
+= Neo4j und Javascript =
+
+// console
+
+[source,cypher]
+----
+CREATE (car:Fahrzeug{name:"Golf"})<-[:TEIL_VON {anzahl:1}]-(karosse:Teil{name:"Karosserie"}),
+karosse<-[:TEIL_VON {anzahl:4}]-(rad:Teil{name:"Rad"})
+----
+Nodes created: 3
+Properties set: 5
+Labels added: 3
+
+// graph:erster_graph
+
+Abfrage aller Teile  des Fahrzeuges “Golf” in der Datenbank in beliebiger Tiefen:
+
+[source,cypher]
+----
+MATCH teil:Teil-[r:TEIL_VON]->()-[:TEIL_VON*0..]->auto:Fahrzeug WHERE auto.name="Golf" RETURN teil.name, r.anzahl
+----
+Rad
+Karosserie
